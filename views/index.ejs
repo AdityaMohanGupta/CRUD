@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alien CRUD</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Alien Management</h1>
+    <section>
+      <h2>Show All Aliens</h2>
+      <form id="find-alien-form">
+        <button type="submit">Show All Aliens</button>
+      </form>
+      <p id="find-alien-response" class="alien-response"></p>
+    </section>
+    <!-- Add Alien Section -->
+    <section>
+      <h2>Add Alien</h2>
+      <form id="add-alien-form">
+        <input type="text" id="alien-name" placeholder="Name" required />
+        <input type="text" id="alien-tech" placeholder="Tech" required />
+        <label>
+          Subscribed:
+          <input type="checkbox" id="alien-sub" />
+        </label>
+        <button type="submit">Add Alien</button>
+      </form>
+      <p id="add-alien-response"></p>
+    </section>
+
+    <!-- Delete Alien Section -->
+    <section>
+      <h2>Delete Alien</h2>
+      <form id="delete-alien-form">
+        <input type="text" id="delete-alien-id" placeholder="Alien ID"/>
+        <!-- <input type="text" id="delete-alien-name" placeholder="Alien Name"/>
+        <input type="text" id="delete-alien-tech" placeholder="Alien Tech"/>
+        <label>
+          Subscribed Status:
+          <input type="checkbox" id="delete-alien-sub" />
+        </label> -->
+        <button type="submit">Delete Alien</button>
+      </form>
+      <p id="delete-alien-response"></p>
+    </section>
+
+    <!-- Patch Alien Section -->
+    <section>
+      <h2>Edit Alien</h2>
+      <form id="patch-alien-form">
+        <input type="text" id="patch-alien-id" placeholder="Alien ID" required />
+        <input type="text" id="patch-alien-name" placeholder="New Name (Optional)" />
+        <input type="text" id="patch-alien-tech" placeholder="New Tech (Optional)" />
+        <label>
+          New Subscribed Status:
+          <input type="checkbox" id="patch-alien-sub" />
+        </label>
+        <button type="submit">Edit Alien</button>
+      </form>
+      <p id="patch-alien-response"></p>
+    </section>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
